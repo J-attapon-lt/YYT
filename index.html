@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yungyuen Technology | Enterprise IT Solutions</title>
+
+    <meta name="description" content="Yungyuen Technology ให้บริการโซลูชันเทคโนโลยีสำหรับองค์กร ทั้ง Network, Security, ERP, Software Development และ Smart Security Systems อย่างครบวงจร" />
+    <meta name="keywords" content="Yungyuen Technology, IT Solutions, Network, Security, ERP, Odoo, CCTV, IoT, Software Development, นครศรีธรรมราช" />
+    <meta name="author" content="Yungyuen Technology Service and Supply Co., Ltd." />
+
+    <meta property="og:title" content="Yungyuen Technology | Enterprise IT Solutions" />
+    <meta property="og:description" content="Built for Stability, Security and Growth." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/hero.jpg" />
+
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: '#0b1b2b',
+                        navysoft: '#10253a',
+                        gold: '#c8a96b',
+                        golddeep: '#b8924f',
+                        softbg: '#f8fafc',
+                        muted: '#64748b'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        h1, h2, h3, h4 {
+            letter-spacing: -0.02em;
+        }
+
+        .hero-bg {
+            background:
+                linear-gradient(rgba(8, 18, 30, 0.82), rgba(8, 18, 30, 0.92)),
+                url('assets/images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-bg {
+                background-attachment: fixed;
+            }
+        }
+
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .section-line {
+            width: 72px;
+            height: 2px;
+            background: #c8a96b;
+            border-radius: 999px;
+        }
+
+        .soft-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .soft-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .project-overlay {
+            background: linear-gradient(to top, rgba(11, 27, 43, 0.75), rgba(11, 27, 43, 0.10));
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav id="main-nav" class="fixed w-full z-50 bg-white/80 backdrop-blur-sm transition-all duration-300 border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+
+                <a href="#home" class="flex items-center gap-3">
+                    <div class="w-11 h-11 bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+                        <img src="assets/logo.png" alt="Yungyuen Technology Logo" class="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                        <h1 class="text-lg sm:text-xl font-semibold text-navy leading-tight">
+                            Yungyuen <span class="text-gold">Technology</span>
+                        </h1>
+                        <p class="text-[11px] text-slate-500 hidden sm:block">Service and Supply Co., Ltd.</p>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-navy font-medium transition">หน้าแรก</a>
+                    <a href="#services" class="text-slate-600 hover:text-navy font-medium transition">บริการ</a>
+                    <a href="#portfolio" class="text-slate-600 hover:text-navy font-medium transition">ผลงาน</a>
+                    <a href="#about" class="text-slate-600 hover:text-navy font-medium transition">เกี่ยวกับเรา</a>
+                    <a href="#contact" class="inline-flex items-center border border-gold text-navy px-5 py-2 rounded-full font-medium hover:bg-gold hover:text-navy transition">
+                        ติดต่อเรา
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="menu-button" aria-label="เปิดเมนู" class="text-slate-700 hover:text-navy focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <div class="px-3 pt-3 pb-4 space-y-1">
+                <a href="#home" class="mobile-link block px-3 py-2 text-slate-600 hover:text-navy hover:bg-slate-50 rounded-md font-medium">หน้าแรก</a>
+                <a href="#services" class="mobile-link block px-3 py-2 text-slate-600 hover:text-navy hover:bg-slate-50 rounded-md font-medium">บริการ</a>
+                <a href="#portfolio" class="mobile-link block px-3 py-2 text-slate-600 hover:text-navy hover:bg-slate-50 rounded-md font-medium">ผลงาน</a>
+                <a href="#about" class="mobile-link block px-3 py-2 text-slate-600 hover:text-navy hover:bg-slate-50 rounded-md font-medium">เกี่ยวกับเรา</a>
+                <a href="#contact" class="mobile-link block px-3 py-2 text-navy font-semibold hover:bg-slate-50 rounded-md">ติดต่อเรา</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-5xl fade-up">
+                <span class="inline-flex items-center px-4 py-1 rounded-full border border-white/20 text-white/80 text-sm tracking-[0.18em] uppercase mb-6">
+                    Trusted IT Infrastructure & Business Solutions
+                </span>
+
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                    Enterprise Technology Solutions
+                    <span class="block text-gold">Built for Stability, Security and Growth</span>
+                </h2>
+
+                <p class="text-lg md:text-xl text-slate-300 max-w-3xl mb-10 leading-relaxed">
+                    Yungyuen Technology delivers reliable IT infrastructure, business systems,
+                    software solutions, and smart security platforms designed for modern organizations.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-gold text-navy px-8 py-4 rounded-full font-semibold hover:opacity-90 transition text-center">
+                        Request a Consultation
+                    </a>
+                    <a href="#portfolio" class="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-navy transition text-center">
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center fade-up">
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-semibold text-navy">50+</h3>
+                    <p class="text-slate-500 mt-2">Completed Projects</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-semibold text-navy">20+</h3>
+                    <p class="text-slate-500 mt-2">Business Clients</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-semibold text-navy">5+</h3>
+                    <p class="text-slate-500 mt-2">Years of Experience</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-semibold text-navy">100%</h3>
+                    <p class="text-slate-500 mt-2">Commitment to Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-softbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-16 fade-up">
+                <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3">Our Services</p>
+                <h3 class="text-3xl md:text-4xl font-semibold text-navy mb-4">Integrated Solutions for Modern Business</h3>
+                <div class="section-line mb-6"></div>
+                <p class="text-slate-600 leading-relaxed">
+                    We provide end-to-end IT services tailored to operational efficiency, security,
+                    and sustainable business growth.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="soft-card p-8 fade-up">
+                    <div class="text-3xl text-gold mb-5"><i class="fa-solid fa-network-wired"></i></div>
+                    <h4 class="text-xl font-semibold text-navy mb-3">Network & Security</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Secure, scalable network infrastructure with firewall, VPN, and access control solutions.
+                    </p>
+                </div>
+
+                <div class="soft-card p-8 fade-up">
+                    <div class="text-3xl text-gold mb-5"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h4 class="text-xl font-semibold text-navy mb-3">ERP Solutions</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Enterprise resource planning systems that unify inventory, sales, accounting, and operations.
+                    </p>
+                </div>
+
+                <div class="soft-card p-8 fade-up">
+                    <div class="text-3xl text-gold mb-5"><i class="fa-solid fa-code"></i></div>
+                    <h4 class="text-xl font-semibold text-navy mb-3">Web & Application Development</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Custom websites and business applications tailored to your workflow and brand positioning.
+                    </p>
+                </div>
+
+                <div class="soft-card p-8 fade-up">
+                    <div class="text-3xl text-gold mb-5"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4 class="text-xl font-semibold text-navy mb-3">Smart Security Systems</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Intelligent CCTV, monitoring, and IoT-based protection systems for enterprise environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="py-14 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-up">
+            <div class="text-center mb-8">
+                <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-[0.22em]">Technologies & Trusted Partners</h4>
+            </div>
+
+            <div class="flex overflow-x-auto hide-scrollbar gap-8 md:gap-16 items-center justify-start md:justify-center py-3 px-2 text-slate-400">
+                <div class="min-w-[120px] hover:text-navy transition duration-300 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-brands fa-aws text-4xl"></i><span class="font-semibold text-xl">AWS</span>
+                </div>
+                <div class="min-w-[120px] hover:text-navy transition duration-300 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-database text-3xl"></i><span class="font-semibold text-xl">Odoo</span>
+                </div>
+                <div class="min-w-[120px] hover:text-navy transition duration-300 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-shield-halved text-3xl"></i><span class="font-semibold text-xl">Fortinet</span>
+                </div>
+                <div class="min-w-[120px] hover:text-navy transition duration-300 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-brands fa-microsoft text-3xl"></i><span class="font-semibold text-xl">Microsoft</span>
+                </div>
+                <div class="min-w-[120px] hover:text-navy transition duration-300 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-server text-3xl"></i><span class="font-semibold text-xl">MikroTik</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-24 bg-softbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3">Selected Projects</p>
+                <h3 class="text-3xl md:text-4xl font-semibold text-navy mb-4">Work That Reflects Operational Excellence</h3>
+                <div class="section-line mx-auto mb-6"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto">
+                    A selection of projects that demonstrate our capability in infrastructure deployment,
+                    system integration, and enterprise security implementation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="soft-card overflow-hidden fade-up">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="assets/images/project1.jpg" alt="Network and Server Infrastructure Project" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 project-overlay"></div>
+                        <div class="absolute bottom-5 left-5">
+                            <span class="inline-block bg-white/15 text-white text-xs tracking-[0.18em] uppercase px-3 py-1 rounded-full border border-white/20">Network & Server</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-sm text-slate-500 mb-2">Manufacturing Sector</p>
+                        <h4 class="text-xl font-semibold text-navy mb-3">Server Room and Network Infrastructure Deployment</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Installation of rack systems, structured cabling, network equipment, and secure connectivity for business continuity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="soft-card overflow-hidden fade-up">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="assets/images/project2.jpg" alt="ERP Implementation Project" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 project-overlay"></div>
+                        <div class="absolute bottom-5 left-5">
+                            <span class="inline-block bg-white/15 text-white text-xs tracking-[0.18em] uppercase px-3 py-1 rounded-full border border-white/20">ERP Solutions</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-sm text-slate-500 mb-2">Retail & Wholesale Business</p>
+                        <h4 class="text-xl font-semibold text-navy mb-3">ERP Integration for Inventory and Accounting</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            System integration to connect sales, warehouse, and accounting workflows in a unified management environment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="soft-card overflow-hidden fade-up">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="assets/images/project3.jpg" alt="Smart Security Project" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 project-overlay"></div>
+                        <div class="absolute bottom-5 left-5">
+                            <span class="inline-block bg-white/15 text-white text-xs tracking-[0.18em] uppercase px-3 py-1 rounded-full border border-white/20">Smart Security</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-sm text-slate-500 mb-2">Hospitality & Warehouse</p>
+                        <h4 class="text-xl font-semibold text-navy mb-3">Enterprise CCTV and Monitoring Systems</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Deployment of surveillance and centralized monitoring systems to support safety, visibility, and real-time alerting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Yungyuen -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-up">
+                    <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3">Why Yungyuen</p>
+                    <h3 class="text-3xl md:text-4xl font-semibold text-navy mb-4">A Reliable Partner for Long-Term Technology Investment</h3>
+                    <div class="section-line mb-6"></div>
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        We combine technical expertise, operational understanding, and responsive service
+                        to support organizations that require dependable systems and measurable results.
+                    </p>
+
+                    <div class="space-y-5">
+                        <div class="flex gap-4">
+                            <div class="text-gold mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-navy">Business-Focused Approach</h4>
+                                <p class="text-slate-600 text-sm">Solutions designed around practical workflow, budget, and long-term maintainability.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="text-gold mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-navy">End-to-End Delivery</h4>
+                                <p class="text-slate-600 text-sm">From consultation and procurement to deployment, testing, and support.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="text-gold mt-1"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-navy">Responsive After-Sales Service</h4>
+                                <p class="text-slate-600 text-sm">Fast support and dependable follow-up for mission-critical systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-up">
+                    <img src="assets/images/about.jpg" alt="Corporate IT Solutions" class="rounded-3xl shadow-xl object-cover w-full h-[520px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="py-16 bg-softbg border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-up">
+            <div class="text-center mb-10">
+                <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3">Trusted By</p>
+                <h3 class="text-2xl md:text-3xl font-semibold text-navy">Organizations That Value Reliability</h3>
+            </div>
+
+            <div class="flex justify-center gap-8 md:gap-12 flex-wrap text-slate-400 font-semibold text-lg">
+                <span>บริษัท A</span>
+                <span>โรงงาน B</span>
+                <span>โรงแรม C</span>
+                <span>คลังสินค้า D</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-softbg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 fade-up">
+                <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3">Testimonials</p>
+                <h3 class="text-3xl md:text-4xl font-semibold text-navy">What Our Clients Say</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="soft-card p-8 fade-up">
+                    <div class="text-gold text-2xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-slate-600 leading-relaxed mb-5">
+                        ทีมงานทำงานเป็นระบบ ให้คำแนะนำได้ตรงกับปัญหาหน้างานจริง และดูแลหลังติดตั้งได้ดีมาก
+                    </p>
+                    <div class="text-navy font-semibold">บริษัท ABC</div>
+                </div>
+
+                <div class="soft-card p-8 fade-up">
+                    <div class="text-gold text-2xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-slate-600 leading-relaxed mb-5">
+                        โครงการวางระบบ ERP ช่วยให้การควบคุมสต็อกและข้อมูลภายในองค์กรมีประสิทธิภาพขึ้นอย่างชัดเจน
+                    </p>
+                    <div class="text-navy font-semibold">บริษัท XYZ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-navy text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
+            <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-4">Let’s Talk</p>
+            <h3 class="text-3xl md:text-4xl font-semibold mb-6">
+                Ready to Strengthen Your IT Infrastructure?
+            </h3>
+            <p class="text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Discuss your project with our team and explore solutions designed for security, efficiency, and long-term growth.
+            </p>
+            <a href="#contact" class="inline-flex items-center bg-gold text-navy px-8 py-4 rounded-full font-semibold hover:opacity-90 transition">
+                Schedule a Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-up">
+                    <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3">About Our Company</p>
+                    <h3 class="text-3xl md:text-4xl font-semibold text-navy mb-4">Strategic Technology Support for Business Growth</h3>
+                    <div class="section-line mb-6"></div>
+
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        <strong>บริษัท ยั่งยืน เทคโนโลยี เซอร์วิส แอนด์ ซัพพลาย จำกัด</strong>
+                        มุ่งมั่นในการเป็นพันธมิตรด้านเทคโนโลยีสำหรับองค์กรธุรกิจ โดยให้บริการตั้งแต่การให้คำปรึกษา
+                        จัดหาอุปกรณ์ วางระบบ พัฒนาซอฟต์แวร์ ไปจนถึงการดูแลหลังส่งมอบอย่างครบวงจร
+                    </p>
+
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        เราเชื่อว่าโซลูชันที่ดีต้องไม่เพียงตอบโจทย์ทางเทคนิค แต่ต้องช่วยให้องค์กรทำงานได้อย่างมีประสิทธิภาพ
+                        ปลอดภัย และเติบโตได้อย่างยั่งยืนในระยะยาว
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div class="soft-card p-6">
+                            <h4 class="font-semibold text-navy mb-2">Professional Team</h4>
+                            <p class="text-sm text-slate-600">ทีมงานมีประสบการณ์ตรงในงานระบบสำหรับองค์กรและอุตสาหกรรม</p>
+                        </div>
+                        <div class="soft-card p-6">
+                            <h4 class="font-semibold text-navy mb-2">Reliable Standards</h4>
+                            <p class="text-sm text-slate-600">มุ่งเน้นคุณภาพงาน ความปลอดภัย และความพร้อมใช้งานจริง</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-up">
+                    <img src="assets/images/project1.jpg" alt="Yungyuen Technology Team and Services" class="rounded-3xl shadow-xl object-cover w-full h-[540px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-navy relative">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-[28px] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+
+                <!-- Contact Info -->
+                <div class="lg:w-2/5 bg-navysoft text-white p-10 lg:p-12">
+                    <div class="fade-up">
+                        <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3">Contact Us</p>
+                        <h3 class="text-3xl font-semibold mb-3">Let’s Discuss Your Project</h3>
+                        <p class="text-slate-300 mb-10 leading-relaxed">
+                            Our team is ready to understand your requirements and recommend the right solution for your organization.
+                        </p>
+
+                        <div class="space-y-7">
+                            <div class="flex items-start gap-4">
+                                <div class="text-gold text-lg mt-1"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Office Location</h4>
+                                    <p class="text-slate-300 text-sm leading-relaxed">
+                                        บริษัท ยั่งยืน เทคโนโลยี เซอร์วิส แอนด์ ซัพพลาย จำกัด<br>
+                                        123/45 ถนนตัวอย่าง ต.ในเมือง อ.เมือง<br>
+                                        จ.นครศรีธรรมราช 80000
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="text-gold text-lg mt-1"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Phone</h4>
+                                    <p class="text-slate-300 text-sm">089-123-4567</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="text-gold text-lg mt-1"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <p class="text-slate-300 text-sm">contact@yungyuentech.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:w-3/5 p-10 lg:p-12 bg-white">
+                    <div class="fade-up">
+                        <p class="text-sm uppercase tracking-[0.25em] text-gold font-semibold mb-3">Inquiry Form</p>
+                        <h3 class="text-2xl md:text-3xl font-semibold text-navy mb-8">Send Us a Message</h3>
+
+                        <form action="https://formspree.io/f/xaqprlqg" method="POST" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="company" class="block text-sm font-medium text-slate-700 mb-2">ชื่อบริษัท / องค์กร</label>
+                                    <input
+                                        id="company"
+                                        name="company"
+                                        type="text"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold focus:border-gold outline-none transition"
+                                        placeholder="ระบุชื่อบริษัท"
+                                        required
+                                    />
+                                </div>
+
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-slate-700 mb-2">เบอร์โทรศัพท์</label>
+                                    <input
+                                        id="phone"
+                                        name="phone"
+                                        type="tel"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold focus:border-gold outline-none transition"
+                                        placeholder="08x-xxx-xxxx"
+                                        required
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-700 mb-2">อีเมล</label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold focus:border-gold outline-none transition"
+                                    placeholder="your@email.com"
+                                />
+                            </div>
+
+                            <div>
+                                <label for="details" class="block text-sm font-medium text-slate-700 mb-2">รายละเอียดโปรเจกต์ที่ต้องการ</label>
+                                <textarea
+                                    id="details"
+                                    name="details"
+                                    rows="5"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold focus:border-gold outline-none transition resize-none"
+                                    placeholder="อธิบายความต้องการหรือปัญหาเบื้องต้น..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <input type="hidden" name="_subject" value="New inquiry from Yungyuen Technology website" />
+
+                            <button
+                                type="submit"
+                                class="w-full bg-navy text-white font-semibold py-4 rounded-xl hover:bg-navysoft transition shadow-lg flex justify-center items-center gap-2"
+                            >
+                                <i class="fa-solid fa-paper-plane"></i> Request Proposal
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#08121e] text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white rounded overflow-hidden border border-slate-700">
+                        <img src="assets/logo.png" alt="Yungyuen Technology Logo Small" class="w-full h-full object-contain">
+                    </div>
+                    <span class="text-white font-medium">Yungyuen Technology Service and Supply Co., Ltd.</span>
+                </div>
+                <div class="text-sm text-center md:text-right">
+                    &copy; 2026 Yungyuen Technology. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 20) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
